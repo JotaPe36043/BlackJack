@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Jack</title>
+  <link rel="stylesheet" href="blackjack.css">
+  <script src="blackjack.js"></script>
+  </script>
+
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <div id="telainicial">
+    <img id="logo" src="logo.png" alt="">
+    <div class="botao" id="jogar" onclick="comecaAposta()">Jogar</div>
+    <label for="meuCampo">Digite um código:</label>
+    <input type="text" id="meuCampo" name="meuCampo">
+    <div class="botao code" id="enviar"  onclick="verificarCodigo()">Usar código</div>
+    <div id="mensagem"></div>
+  </div>
+
+  
+<div id= "aposta_feita">
+    </div>
+  <div id="apostas">
+    
+    <div class="chips" id="chips">
+    <div class="pokerchip yellow" id="ficha50" onclick="criarCopia('yellow',50)"></div>
+    <div class="pokerchip red" id="ficha100" onclick="criarCopia('red',100)"></div>
+    <div class="pokerchip blue" id="ficha250" onclick="criarCopia('blue',250)"></div>
+    <div class="pokerchip green" id="ficha500" onclick="criarCopia('green',500)"></div>
+    <div class="pokerchip black" id="ficha1000" onclick="criarCopia('black',1000)"></div>
+  </div>
+  <button class="botao" id="botao_aposta" style="display: none;" onclick="comecajogo()">APOSTAR</button>
+  <div class="botao" id= "botao_esvaziar" onclick="esvaziarAposta()">Esvaziar Aposta</div>
+ </div>
+  <div class="numero-fichas" id="numero-fichas" style="display: none;">
+    Aposta: <span id="numero_aposta">0</span>
+    <div class="numero-carteira">Carteira: <span id="numero_carteira"></span></div>
+    
+  </div>
+  
+  
+  
+  
+  
+
+  <div id="game-container" style="display: none;">
+    <h2>Dealer: <span class="point" id="soma-do-dealer" ></span></h2>
+    <div id="cartas-do-dealer">
+        <img id="escondida" src="./cards/BACK.png">
+    </div>
+
+    <h2>Você: <span class="point" id="sua-soma"></span></h2>
+    <div id="suas-cartas"></div>
+
+    <br>
+    <div class="botao compra" id="comprar" onclick="comprar()">Comprar</div>
+    <div class="botao ficar" id="ficar" onclick="ficar()">Ficar</div>
+    <div class="botao dobrar" id="dobrar" style="display: none;" onclick="dobrar()">Dobrar</div>
+    <p id="resultado"></p>
+  </div>
+</body>
+</html>

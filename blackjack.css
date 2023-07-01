@@ -1,0 +1,328 @@
+body {
+  justify-content: center;
+  background: rgb(51, 153, 67);
+  background: radial-gradient(
+  circle,
+  rgb(42, 128, 55) 0%,
+  rgba(30, 88, 39, 1) 55%,
+  rgba(21, 60, 27, 1) 100%
+  );
+  background-size: cover;
+  text-align: center;
+  overflow: hidden;
+  }
+  
+  #telainicial {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  #apostas {
+    margin-left: 30px;
+    display: none;
+    
+  }
+
+
+  #game-container{
+    display: none;
+  }
+ 
+  #suas-cartas img,
+  #cartas-do-dealer img{
+    height: 175px;
+    width: 125px;
+    margin: -25px;
+  }
+  
+  #escondida{
+    border-radius: 5px;
+  }
+
+  #escondida.flip{
+    transform: rotateY(180deg)
+  }
+
+  #comprar {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  }
+  
+  #ficar {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  }
+
+  #dobrar{
+  width: 100px;
+  height: 30px;
+  font-size: 20px
+  }
+  #logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #jogar{
+    padding: 0.75rem 2.25rem;
+    margin-top: 520px;
+  }
+   
+  .code{
+    margin-top: 7px;
+  }
+
+  .botao {
+  user-select: none;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  z-index: 1;
+  justify-content: center;
+  
+ 
+  }
+  
+  .botao:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0cf;
+  border-radius: 10rem;
+  z-index: -2;
+  }
+  .botao.compra:after{
+    background-color: #0cf; 
+  }
+  .botao.ficar:after{
+    background-color: #dbe919; 
+  }
+  .botao.dobrar:after{
+    background-color: #0dc00d; 
+  }
+
+  .botao:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #008fb3;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+  }
+  .botao.compra:before{
+    background-color: #008fb3; 
+  }
+  .botao.ficar:before{
+    background-color: #a2ad07; 
+  }
+  .botao.dobrar:before{
+    background-color: #0a790a;
+  }
+  .botao:hover {
+  color: #000000fd;
+  }
+  
+  .botao:hover:before {
+  width: 100%;
+  }
+  .point{
+    color: rgb(245, 245, 245);
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display:inline-block;
+  }
+  /* optional reset for presentation */
+  
+body {
+  font-family: Arial;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+  .container {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  }
+  
+  h1 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  color: #777;
+  }
+  
+  span {
+  display: block;
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  color: #777;
+  }
+  
+  span a {
+  font-size: 0.7rem;
+  color: #999;
+  text-decoration: underline;
+  }
+  
+  @keyframes cartaVoadora {
+  0% {
+  opacity: 0;
+  transform: translate(500%, -300%);
+  }
+  50% {
+  opacity: 1;
+  transform: translate(0%);
+  }
+  100% {
+  opacity: 1;
+  transform: translate(0);
+  }
+  }
+  
+  #suas-cartas img.carta-voadora {
+  animation: cartaVoadora 1s linear;
+  }
+
+  h1 {
+    text-align: center;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
+    font-size: 46px;
+    font-family: 'Fredoka One', cursive;
+  }
+  h1 > span {
+    color: #f00;
+  }
+  h2 {
+    text-align: center;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
+    font-size: 22px;
+    font-family: 'Fredoka One', cursive;
+  }
+  a {
+    color: #89310F;
+  }
+  .chips {
+    margin: 40% 10%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #014D43;
+    box-shadow: 0 0 0 5px #282828 inset, 0 0 0 10px #969696 inset, 0 0 6px rgba(255, 255, 255, 0.2);
+    align-items: center;
+    justify-content: center;
+  }
+  .pokerchip {
+    margin: 1em;
+    position: relative;
+    display: inline-block;
+    width: 151px;
+    height: 151px;
+    border-radius: 50%;
+    background-size: 151px 151px;
+    background-position: left center;
+    background-size: cover;
+  }
+  
+  .numero-fichas {
+    position: absolute;
+    top: 300px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #858206;
+  }
+
+  #numero_aposta {
+    font-size: 50px;
+    color: #c50e0e;
+  }
+  
+  .numero-carteira {
+    position: absolute;
+    bottom: 300px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  #numero_carteira{
+    font-size: 50px;
+  }
+  
+  
+  
+  /* Colors */
+  .yellow{
+    background-image: url(fichas/50-coin.png);
+  }
+  .red {
+    background-image: url(fichas/100-coin.png);
+  }
+  .blue {
+    background-image: url(fichas/250-coin.png);
+  }
+  .green {
+    background-image: url(fichas/500-coin.png);
+  }
+  .black {
+    background-image: url(fichas/1000-coin.png);
+  }
+  
+  #botao_esvaziar{
+    position: absolute;
+    bottom: 300px;
+    left: 10px;
+    color: #fff;
+    font-size: 20px;
+  }
+  #botao_aposta{
+    position: absolute;
+    bottom: 370px;
+    left: 10px;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  label {
+    margin-top: 10px;
+  }
+
+  input[type="text"] {
+    width: 300px;
+    height: 25px;
+  }
+  
+  #mensagem {
+    margin-top: 10px;
+  }
+
+  #resultado {
+    font-size: 30px;
+    color: #fffffffd;
+    background-color: #d6e412;
+    padding: 10px;
+    font-style: oblique;
+    display: none;
+  }
